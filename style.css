@@ -37,3 +37,12 @@ header {
   .book-info-text {
     grid-area: "text"
   }
+  .account-box {
+      border: solid black;
+      margin: 150px auto;
+      padding: 30px;
+      width: 300px;
+  }
+  .account-box * {
+      display: inline-block;
+  }

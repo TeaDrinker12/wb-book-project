@@ -9,12 +9,24 @@
       <header>
         <img id="header-image" src="" alt="Header Image">
         <div id="account-links">
-          <a class="account-link" href="">Login</a>
-          <a class="account-link" href="">Signup</a>
+          <a class="account-link" href="login.html">Login</a>
+          <a class="account-link" href="signup.html">Signup</a>
         </div>
       </header>
       <content>
-        <h1>Login Page</h1>
+        <div class="account-box">
+          <form id="login-form" action="" method="POST">
+            <label>
+              User Name
+              <input type="text" name="username">
+            </label>
+            <label>
+              Password
+              <input type="password" name="password">
+            </label>
+            <input type="submit" value="Login">
+          </form>
+        </div>
       </content>
       <footer>
       </footer>
