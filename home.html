@@ -27,6 +27,21 @@
         height: 50px;
 
       }
+      .book-info {
+        border: solid black;
+        margin: 20px 50px;
+        padding: 20px;
+        display: grid;
+        grid-template-areas: "image text text text";
+      }
+      .book-info-image {
+        grid-area: "image";
+        width: 150px;
+        height: 200px;
+      }
+      .book-info-text {
+        grid-area: "text"
+      }
     </style>
   </head>
   <body>
@@ -40,7 +55,7 @@
       </header>
       <content>
         <div class="book-info">
-          <img src="" alt="Book Cover">
+          <img class="book-info-image" src="" alt="Book Cover">
           <div class="book-info-text">
             <p>Titles</p>
             <p>Author Names</p>
