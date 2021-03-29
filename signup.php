@@ -1,6 +1,6 @@
 <?php
   $PAGETITLE = "Singnup";
-  require("header.php");
+  require("shared/header.php");
 ?>
       <content>
         <content>
@@ -24,5 +24,5 @@
         </content>
       </content>
 <?php
-  require("footer.php");
+  require("shared/footer.php");
 ?>
