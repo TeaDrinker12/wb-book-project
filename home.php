@@ -9,8 +9,8 @@
       <header>
         <img id="header-image" src="" alt="Header Image">
         <div id="account-links">
-          <a class="account-link" href="login.html">Login</a>
-          <a class="account-link" href="signup.html">Signup</a>
+          <a class="account-link" href="login.php">Login</a>
+          <a class="account-link" href="signup.php">Signup</a>
         </div>
       </header>
       <content>
