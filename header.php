@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home Page</title>
+    <title><?= $PAGETITLE ?></title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
