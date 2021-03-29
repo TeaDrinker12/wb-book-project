@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title><?= $PAGETITLE ?></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shared/style.css">
   </head>
   <body>
     <div id="wrapper">
