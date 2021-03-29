@@ -1,4 +1,5 @@
 <?php
+  $PAGETITLE = "Favorite Books";
   require("header.php");
 ?>
       <content>

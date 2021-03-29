@@ -1,4 +1,5 @@
 <?php
+  $PAGETITLE = "Singnup";
   require("header.php");
 ?>
       <content>

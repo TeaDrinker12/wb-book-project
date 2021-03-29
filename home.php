@@ -1,4 +1,5 @@
 <?php
+  $PAGETITLE = "Home";
   require("header.php");
 ?>
 
