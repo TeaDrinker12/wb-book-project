@@ -1,1 +1,2 @@
-CREATE TABLE User (id INT PRIMARY, title VARCHAR(120), author VARCHAR(20));
+CREATE TABLE `bookapp`.`user` ( `id` INT NOT NULL , `username` VARCHAR(40) NOT NULL , `password` VARCHAR(240) NOT NULL , PRIMARY KEY (`id`), UNIQUE (`username`)) ENGINE = InnoDB;
+INSERT INTO `user` (`id`, `username`, `password`) VALUES ('0', 'admin', 'admin');
