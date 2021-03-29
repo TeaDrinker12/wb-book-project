@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Signup Page</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="wrapper">
-      <header>
-        <img id="header-image" src="" alt="Header Image">
-        <div id="account-links">
-          <a class="account-link" href="login.php">Login</a>
-          <a class="account-link" href="signup.php">Signup</a>
-        </div>
-      </header>
+<?php
+  require("header.php");
+?>
       <content>
         <content>
           <div class="account-box">
@@ -34,8 +22,6 @@
           </div>
         </content>
       </content>
-      <footer>
-      </footer>
-    </div>
-  </body>
-</html>
+<?php
+  require("footer.php");
+?>
