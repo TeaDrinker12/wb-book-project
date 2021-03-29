@@ -1,6 +1,6 @@
 <?php
   $PAGETITLE = "Login";
-  require("header.php");
+  require("shared/header.php");
 ?>
       <content>
         <div class="account-box">
@@ -18,5 +18,5 @@
         </div>
       </content>
 <?php
-  require("footer.php");
+  require("shared/footer.php");
 ?>
