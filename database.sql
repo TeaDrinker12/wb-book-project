@@ -1,0 +1,1 @@
+CREATE TABLE User (id INT PRIMARY, title VARCHAR(120), author VARCHAR(20));
