@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="wrapper">
-      <header>
-        <img id="header-image" src="" alt="Header Image">
-        <div id="account-links">
-          <a class="account-link" href="login.php">Login</a>
-          <a class="account-link" href="signup.php">Signup</a>
-        </div>
-      </header>
+<?php
+  $PAGETITLE = "Login";
+  require("header.php");
+?>
       <content>
         <div class="account-box">
           <form id="login-form" action="" method="POST">
@@ -28,8 +17,6 @@
           </form>
         </div>
       </content>
-      <footer>
-      </footer>
-    </div>
-  </body>
-</html>
+<?php
+  require("footer.php");
+?>
