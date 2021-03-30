@@ -1,17 +1,7 @@
 <?php
   $PAGETITLE = "Home";
   require("shared/header.php");
-
-  $HOST = "localhost";
-  $USERNAME = "root";
-  $PASSWORD = "root";
-  $DATABASENAME = "bookapp";
-  $db = mysqli_connect($HOST, $USERNAME, $PASSWORD, $DATABASENAME);
-
-  $query = "SELECT * FROM user";
-  $result = mysqli_query($db, $query);
-  $firstUser = mysqli_fetch_assoc($result);
-  echo var_dump($firstUser);
+  include("shared/db_config.php");
 
 ?>
       <content>
