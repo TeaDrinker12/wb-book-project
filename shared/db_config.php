@@ -8,10 +8,19 @@
   if(mysqli_errno($db)) {
       echo "Database Error: ";
       echo mysqli_error();
+      exit();
   }
 
   $query = "SELECT * FROM user";
   $result = mysqli_query($db, $query);
   $firstUser = mysqli_fetch_assoc($result);
-  echo var_dump($firstUser);
+
+  $firstUsername = $firstUser['username'];
+  $firstPassword = $firstUser['password'];
+
+  echo "Database connection establised successfuly!";
+  echo "<br>";
+  echo "Username: $firstUsername ";
+  echo "<br>";
+  echo "Password: $firstPassword ";
 ?>
