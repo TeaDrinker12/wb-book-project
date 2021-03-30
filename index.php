@@ -1,6 +1,8 @@
 <?php
   $PAGETITLE = "Home";
   require("shared/header.php");
+  include("shared/db_config.php");
+
 ?>
       <content>
         <div class="book-info">
