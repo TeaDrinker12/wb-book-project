@@ -31,7 +31,6 @@
 
           console.log(this.responseText);
           let result = JSON.parse(xhttp.responseText).books;
-          console.log(result);
           
           for (book of result) {
             content.innerHTML += `
