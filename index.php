@@ -5,16 +5,49 @@
 
 ?>
       <content>
-        <div class="book-info">
-          <img class="book-info-image" src="" alt="Book Cover">
-          <div class="book-info-text">
-            <p class="book-title">Title</p>
+        
+      </content>
+      <a id="more-button" onclick="loadContent();"> More... </a>
+      <script>
+        let currentPage = 1;
+        let category = 'game';
+        let categories = {
+          "game": "Game Development",
+          "web": "Web Development",
+        };
+        let content = document.body.getElementsByTagName('content')[0];
+        loadContent();
+
+        function loadContent() {
+        let xhttp = new XMLHttpRequest();
+        xhttp.open('GET', `https://api.itbook.store/1.0/search/${category}/${currentPage}`, true);
+        xhttp.send();
+        xhttp.onreadystatechange = function () {
+          if (!(this.readyState == 4 && this.status == 200)) {
+            return;
+          }
+
+          console.log(this.responseText);
+          let result = JSON.parse(xhttp.responseText).books;
+          console.log(result);
+          
+          for (book of result) {
+            content.innerHTML += `
+            <div class="book-info">
+            <img class="book-info-image" src="${book.image}" alt="Book Cover">
+            <div class="book-info-text">
+            <p class="book-title">${book.title}</p>
             <p class="author">Author</p>
             <p class="publishing-date">Publishing Date</p>
-            <p class="category">Category</p>
+            <p class="category">${categories[category]}</p>
           </div>
         </div>
-      </content>
+            `;
+          }
+        }
+        currentPage += 1;
+        }
+      </script>
 <?php
   require("shared/footer.php");
 ?>
