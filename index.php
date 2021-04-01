@@ -5,9 +5,11 @@
 
 ?>
       <content>
-        
       </content>
-      <a id="more-button" onclick="loadContent();"> More... </a>
+      <br>
+      <button id="more-link" onclick="loadContent();">More...</button>
+
+
       <script>
         let currentPage = 1;
         let category = 'game';
