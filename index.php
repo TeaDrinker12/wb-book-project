@@ -39,9 +39,9 @@
             <img class="book-info-image" src="${book.image}" alt="Book Cover">
             <div class="book-info-text">
             <p class="book-title">${book.title}</p>
-            <p class="author">Author</p>
-            <p class="publishing-date">Publishing Date</p>
-            <p class="category">${categories[category]}</p>
+            <p class="description">${book.subtitle}</p>
+            <p class="category">Category: ${categories[category]}</p>
+            <p class="isbn">ISBN: ${book.isbn13}</p>
           </div>
         </div>
             `;
