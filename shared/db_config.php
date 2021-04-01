@@ -17,10 +17,4 @@
 
   $firstUsername = $firstUser['username'];
   $firstPassword = $firstUser['password'];
-
-  echo "Database connection establised successfully!";
-  echo "<br>";
-  echo "Username: $firstUsername ";
-  echo "<br>";
-  echo "Password: $firstPassword ";
 ?>
