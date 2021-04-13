@@ -21,6 +21,17 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
 (1, 'admin', 'admin');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userbook`
+--
+
+CREATE TABLE `userbook` (
+  `userid` int(11) NOT NULL,
+  `bookid` varchar(13) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Indexes for dumped tables
 --
@@ -33,6 +44,12 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `username` (`username`);
 
 --
+-- Indexes for table `userbook`
+--
+ALTER TABLE `userbook`
+  ADD PRIMARY KEY (`userid`,`bookid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -40,4 +57,4 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
