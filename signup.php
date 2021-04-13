@@ -8,6 +8,9 @@
   {
         $user = $_POST['username'];
         $psd = $_POST['password'];
+        $query = "INSERT INTO user (id, username, password) VALUES (NULL, '$user' , '$psd')";
+        $res = mysqli_query($db,$query);
+        header('Location: login.php');
   }
 
 ?>
@@ -38,8 +41,6 @@
 
       <?php
      
-      $query = "INSERT INTO user (id, username, password) VALUES (NULL, '$user' , '$psd')";
-      $res = mysqli_query($db,$query);
 
   require("shared/footer.php");
       ?>
