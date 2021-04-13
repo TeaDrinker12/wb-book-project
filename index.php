@@ -5,20 +5,46 @@
 
 ?>
       <content>
-      </content>
-      <br>
+      <select id="search-category" onchange="updateCategory();">
+      <option value="web" selected>Web Development</option>
+      <option value="mobile">Mobile Development</option>
+      <option value="game">Game Development</option>
+      <option value="machine learning">Machine Learning</option>
+      </select>
+      <div id="book-container">
+      </div>
       <button id="more-link" onclick="loadContent();">More...</button>
+      </content>
 
 
       <script>
+        let content = document.getElementById('book-container');
+        let select = document.getElementById('search-category');
+
         let currentPage = 1;
-        let category = 'game';
+        let category = select.value;
         let categories = {
           "game": "Game Development",
           "web": "Web Development",
+          "mobile": "Mobile Development",
+          "machine learning": "Machine Learning",
         };
-        let content = document.body.getElementsByTagName('content')[0];
         loadContent();
+
+        function addToFavorites(isbn13) {
+          let xhttp = new XMLHttpRequest();
+          let url = `favorite.php`
+          xhttp.open('POST', url, true);
+          xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+          xhttp.send(`add="${isbn13}"`);
+        }
+
+        function updateCategory() {
+          category = select.value;
+          currentPage = 1;
+          content.innerHTML = "";
+          loadContent();
+        }
 
         function loadContent() {
         let xhttp = new XMLHttpRequest();
@@ -41,6 +67,9 @@
             <p class="description">${book.subtitle}</p>
             <p class="category">Category: ${categories[category]}</p>
             <p class="isbn">ISBN: ${book.isbn13}</p>
+            <?php if (isset($_SESSION["userid"])) { ?>
+            <button onclick="addToFavorites('${book.isbn13}');" class="button">Add Book</button>
+            <?php } ?>
           </div>
         </div>
             `;

@@ -1,7 +1,20 @@
+body {
+  color: #191923;
+}
+a {
+  color: #347FC4;
+}
 header {
-    border: solid black;
+    border: solid #191923;
     padding: 10px;
+    background-color: #EFE7DA;
+    border-radius: 5px;
 
+  }
+  #wrapper {
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
   }
   #header-image {
     width: 50px;
@@ -12,14 +25,14 @@ header {
     margin-right: 35px;
   }
   .account-link {
-    border: solid black;
     padding: 6px;
     text-decoration: none;
   }
   footer {
     border: solid black;
-    background-color: gray;
+    background-color: #EFE7DA;
     height: 50px;
+    border-radius: 5px;
 
   }
   .book-info {
